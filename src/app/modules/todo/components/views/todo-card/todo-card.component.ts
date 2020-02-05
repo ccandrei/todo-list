@@ -40,7 +40,7 @@ export class TodoCardComponent implements OnInit {
         const nItem = new ModelTodoItem(null, result.title, new Date(), new Date());
         let nITemResult = null;
         try {
-          nITemResult = await this.todoService.createItem(nItem, this.card.id).toPromise();
+          
           this.card.content.push(nITemResult);
         } catch (e) {
           alert('Error   ' + e.getMessages());
