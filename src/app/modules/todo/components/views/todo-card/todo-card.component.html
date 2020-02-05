@@ -1,0 +1,33 @@
+<mat-spinner class="align-center" *ngIf="loading"></mat-spinner>
+<mat-card *ngIf="!loading" class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+      <span>{{card.title}}
+        <button class="align-center" matTooltip="Add new item" (click)="openDialog()" mat-icon-button>
+        <mat-icon>add</mat-icon></button>
+         <button class="align-center" matTooltip="Add new item" (click)="reloadContent()" mat-icon-button>
+        <mat-icon>refresh</mat-icon></button>
+      </span>
+    </mat-card-title>
+    <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let item of card.content">
+        <p mat-line>{{item.title}}</p>
+        <p mat-line> {{item.updatedAt | date}} </p>
+        <button mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon (click)="removeItem(item)">remove</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions class="text-right">
+    <!-- Todo: Edit card -->
+    <button mat-icon-button><mat-icon>edit</mat-icon></button>
+    <button (click)="removeCard()" mat-icon-button><mat-icon>delete</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
