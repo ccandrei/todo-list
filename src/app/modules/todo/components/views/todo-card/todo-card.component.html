@@ -3,10 +3,7 @@
   <mat-card-header>
     <mat-card-title>
       <span>{{card.title}}
-        <button class="align-center" matTooltip="Add new item" (click)="openDialog()" mat-icon-button>
-        <mat-icon>add</mat-icon></button>
-         <button class="align-center" matTooltip="Add new item" (click)="reloadContent()" mat-icon-button>
-        <mat-icon>refresh</mat-icon></button>
+        
       </span>
     </mat-card-title>
     <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
@@ -27,6 +24,10 @@
   </mat-card-content>
   <mat-card-actions class="text-right">
     <!-- Todo: Edit card -->
+    <button class="align-center" matTooltip="Add new item" (click)="openDialog()" mat-icon-button>
+      <mat-icon>add</mat-icon></button>
+       <button class="align-center" matTooltip="Add new item" (click)="reloadContent()" mat-icon-button>
+      <mat-icon>refresh</mat-icon></button>
     <button mat-icon-button><mat-icon>edit</mat-icon></button>
     <button (click)="removeCard()" mat-icon-button><mat-icon>delete</mat-icon></button>
   </mat-card-actions>

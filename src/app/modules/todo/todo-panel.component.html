@@ -1,15 +1,26 @@
-<mat-toolbar class="example-header text-center">Simple TodoList Manager - Technical test
+<mat-toolbar class="example-header text-center">Simple TodoList Manager - Choose you 
   <mat-divider [vertical]="true"></mat-divider>
-  <button (click)="openDialog()" mat-icon-button>
+  <!--<button (click)="openDialog()" mat-icon-button>
     <mat-icon>add</mat-icon>
+  </button>-->
+<p>  </p>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">
+    card type
   </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" (click)="openDialog()">Phone Calls</a>
+    <a class="dropdown-item" (click)="openDialog()">Meetings</a>
+    <a class="dropdown-item" (click)="openDialog()">Correspondence</a>
+    <a class="dropdown-item" (click)="openDialog()">Projects</a>
+  </div>
+</div>
 </mat-toolbar>
-
-<div class="container p-3 o-auto">
-  <div class="row" >
-    <app-todo-card class="col-3  mb-2" (eventRemove)="removeCard($event)" *ngFor="let card of cards" [card]="card">
+<div class="container p-5 o-auto">
+  <div class="row">
+    <app-todo-card class="col-5  mb-2" (eventRemove)="removeCard($event)" *ngFor="let card of cards" [card]="card">
     </app-todo-card>
   </div>
 </div>
 <mat-toolbar class="example-footer">Footer</mat-toolbar>
-

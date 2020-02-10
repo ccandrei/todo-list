@@ -1,0 +1,28 @@
+button {
+    background: rgb(73, 73, 185);
+    color: rgba(10, 29, 1, 0.884);
+   
+  
+}
+
+.mat-card {
+    background-color: rgb(208, 212, 182);
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    align-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mat-card-title {
+    height: fit-content;
+    width: 280px;
+    background-color: aqua;
+    
+}
+.mat-card-content {
+    
+    height: fit-content;
+    width: 280px;
+}
